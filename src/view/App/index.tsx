@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import styles from "./index.module.scss"
 
 import { useToDoStore } from "../../data/stores/useToDoStore";
+import { InputPlus } from "../components/inputPlus";
 
 export const App: React.FC = () => {
 	const [
@@ -16,16 +17,21 @@ export const App: React.FC = () => {
 			state.removeTask,
 	]);
 
-	useEffect(() => {
-		createTask("fucking slaves")
-	}, [])
+	console.log(tasks);
+	
 	
 	return (
 		<>
 		<article className={styles.article}>
 			<h1 className={styles.articleTitle}>To-Do App</h1>
 			<section className={styles.articleSection}>
-
+			<InputPlus
+			onAdd = {(title) => {
+				if(title) {
+					createTask(title)
+				}
+			}}
+			></InputPlus>
 			</section>
 			<section className={styles.articleSection}>
 				
