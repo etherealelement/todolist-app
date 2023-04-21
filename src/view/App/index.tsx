@@ -6,8 +6,12 @@ export const App: React.FC = () => {
 		<>
 		<article className={styles.article}>
 			<h1 className={styles.articleTitle}>To-Do App</h1>
-			<section className={styles.articleSection}></section>
-			<section className={styles.articleSection}></section>
+			<section className={styles.articleSection}>
+
+			</section>
+			<section className={styles.articleSection}>
+				
+			</section>
 		</article>
 		</>
 	)
