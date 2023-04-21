@@ -7,7 +7,7 @@ interface InputPlusProps {
 }
 
 
-export const InputPlus: React.FC = ({
+export const InputPlus: React.FC<InputPlusProps>= ({
 	onAdd,
 }) => {
 
